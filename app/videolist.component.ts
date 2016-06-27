@@ -10,6 +10,6 @@ import { Video } from './video';
 export class VideoListComponent {
   selectVideo = new EventEmitter();
   onSelect(vid: Video) {
-    console.log(JSON.stringify(vid));
+    this.selectVideo.next(vid);
   }
 }
